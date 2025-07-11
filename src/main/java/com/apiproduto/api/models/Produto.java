@@ -16,12 +16,12 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private Double valor;
+    private Double preco;
     
     
-    public Produto(String nome, Double valor) {
+    public Produto(String nome, Double preco) {
         this.nome = nome;
-        this.valor = valor;
+        this.preco = preco;
     }
 
 }

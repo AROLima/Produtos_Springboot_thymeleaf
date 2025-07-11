@@ -21,16 +21,16 @@ public class ProdutoController {
         return "listar";
     }
     
-    @GetMapping("/cadastro")
+    @GetMapping("/cadastro") //apresenta o formulário.
     public String mostrarFormulario(Model model) {
         model.addAttribute("produto", new Produto());
         return "cadastrar";
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping("/cadastro") //Ocorre quando o usuário clicar no botão enviar
     public String cadastrarProduto(Produto produto) {
         repository.save(produto);
-        return "cadastrar";
+        return "redirect:/";
     }
 
 
